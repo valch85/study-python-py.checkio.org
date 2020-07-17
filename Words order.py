@@ -1,7 +1,28 @@
 def words_order(text: str, words: list) -> bool:
-    text_words = {w for w in text.split() if w in words}
-    return list(sorted(text_words, key=text.index)) == words
+    text_list = text.split(" ")
+    agregator = []
+    if len(words) > len(set(words)):
+        return False
+    for index, word in enumerate(words):
+        if word in text_list:
+            agregator.append(text_list.index(word))
+        else:
+            return False
+    if sorted(agregator) == agregator:
+        return True
+    else:
+        return False
 
+"""    
+    text_words = []
+    for w in text.split():
+        if w in words:
+            text_words.append(w)
+    if sorted(text_words, key=text.index) == words:
+        return True
+    else:
+        return False
+"""
 
 if __name__ == '__main__':
     print("Example:")
