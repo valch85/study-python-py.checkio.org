@@ -1,8 +1,12 @@
 from typing import List
 
 def sort_by_ext(files: List[str]) -> List[str]:
-
-    return files
+    def key(f):
+        stem, ext = f.rsplit(".", 1)
+        if not stem:
+            stem, ext = ext, ""
+        return (ext, stem)
+    return sorted(files, key=key)
 
 
 if __name__ == '__main__':
