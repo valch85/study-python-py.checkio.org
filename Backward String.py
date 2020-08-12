@@ -1,5 +1,8 @@
 def backward_string(val: str) -> str:
-    return None
+    line = ""
+    for elem in list(reversed(val)):
+        line = line + str(elem)
+    return line
 
 
 if __name__ == '__main__':
