@@ -1,5 +1,4 @@
 def backward_string(val: str) -> str:
-    # your code here
     return None
 
 
