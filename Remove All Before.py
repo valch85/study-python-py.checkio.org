@@ -1,8 +1,9 @@
 from typing import Iterable
 
 def remove_all_before(items: list, border: int) -> Iterable:
-    # your code here
-    print(items)
+    for i in items:
+        if i == border:
+            print(i)
 
 
 
