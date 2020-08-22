@@ -1,9 +1,12 @@
 from typing import Iterable
 
 def remove_all_before(items: list, border: int) -> Iterable:
-    for i in items:
-        if i == border:
-            print(i)
+    try:
+        index_value = items.index(border)
+        new_list = items[index_value:]
+        print(new_list)
+    except ValueError:
+        print(items)
 
 
 
