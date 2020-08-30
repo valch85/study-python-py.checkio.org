@@ -1,29 +1,21 @@
 import re
 def between_markers(text: str, begin: str, end: str) -> str:
-    print("")
-    print("#####")
-    print(text)
     if begin in text:
         start = text.find(begin) + len(begin)
     else:
         start = -1
     ending = text.find(end)
-    print(start)
-    print(ending)
     if ending > 0 and start > ending:
-        print("")
+        return ""
     elif start < 0 and ending < 0:
-        print("answer")
-        print(text)
+        return text
     elif start < 0:
-        print("answer")
-        print(text[0:ending])
+        return text[0:ending]
     elif ending < 0:
-        print("answer")
-        print(text[start:])
+        return text[start:]
     else:
-        print(text[start:ending])
-    #return ''
+        return text[start:ending]
+
 # These "asserts" are used for self-checking and not for testing
 between_markers('What is >apple<', '>', '<') #== "apple", "One sym"
 between_markers("<head><title>My new site</title></head>", "<title>", "</title>") #== "My new site", "HTML"
