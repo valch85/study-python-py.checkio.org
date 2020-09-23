@@ -1,10 +1,13 @@
 def checkio(data: list) -> list:
+# first solution
     new_list = []
     for iterator in data:
         if data.count(iterator) > 1:
             new_list.append(iterator)
     return new_list
 
+# second solution
+# return [x for x in data if data.count(x) > 1]
 
 if __name__ == "__main__":
     assert list(checkio([1, 2, 3, 1, 3])) == [1, 3, 1, 3], "1st example"
