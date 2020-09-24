@@ -1,20 +1,31 @@
 def popular_words(text: str, words: list) -> dict:
-    low_text = text.lower()
-    print(low_text)
+    answer = {}
+    low_text = text.lower().split()
+    for word in words:
+        word_count = low_text.count(word)
+        answer.update({word: word_count})
+    return answer
 
 
-popular_words('''
+if __name__ == '__main__':
+    print("Example:")
+    print(popular_words('''
 When I was One
 I had just begun
 When I was Two
 I was nearly new
-''', ['i', 'was', 'three', 'near'])
+''', ['i', 'was', 'three', 'near']))
 
-#== {
-#        'i': 4,
-#        'was': 3,
-#        'three': 0,
-#        'near': 0
-#    }
-
-
+    # These "asserts" are used for self-checking and not for an auto-testing
+    assert popular_words('''
+When I was One
+I had just begun
+When I was Two
+I was nearly new
+''', ['i', 'was', 'three', 'near']) == {
+        'i': 4,
+        'was': 3,
+        'three': 0,
+        'near': 0
+    }
+    print("Coding complete? Click 'Check' to earn cool rewards!")
