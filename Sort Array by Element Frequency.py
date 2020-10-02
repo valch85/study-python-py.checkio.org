@@ -1,4 +1,4 @@
-# function that convert var to integer if possible
+"""# function that convert var to integer if possible
 def isint(x):
     try:
         a = int(x)
@@ -34,7 +34,14 @@ def frequency_sort(items):
             answer.append(isint(key))
 
     return answer
-
+"""
+def frequency_sort(items):
+    a = iter([items.count(x)for x in list(dict.fromkeys(items))])
+    d = []
+    for s in list(dict.fromkeys(items)):
+        for i in range(next(a)):
+            d.append(s)
+    print(sorted(d, key=lambda x: d.count(x), reverse=True))
 
 frequency_sort([4, 6, 2, 2, 6, 4, 4, 4]) #== [4, 4, 4, 4, 6, 6, 2, 2]
 frequency_sort(['bob', 'bob', 'carl', 'alex', 'bob']) #== ['bob', 'bob', 'bob', 'carl', 'alex']
