@@ -19,4 +19,3 @@ if __name__ == '__main__':
     assert backward_string_by_word('hello   world') == 'olleh   dlrow'
     assert backward_string_by_word('welcome to a game') == 'emoclew ot a emag'
     print("Coding complete? Click 'Check' to earn cool rewards!")
-
