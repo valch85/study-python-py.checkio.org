@@ -1,12 +1,9 @@
 def sum_numbers(text: str) -> int:
     arr1 = []
-
     for s in text.split():
         if s.isdigit():
             arr1.append(int(s))
-
     summa = sum(arr1)
-
     return summa
 
 
