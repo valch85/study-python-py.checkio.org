@@ -23,4 +23,3 @@ if __name__ == '__main__':
     assert checkio("bla bla bla bla") == True, "Bla Bla"
     assert checkio("Hi") == False, "Hi"
     print("Coding complete? Click 'Check' to review your tests and earn cool rewards!")
-
