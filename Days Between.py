@@ -16,4 +16,3 @@ if __name__ == '__main__':
     assert days_diff((2014, 1, 1), (2014, 8, 27)) == 238
     assert days_diff((2014, 8, 27), (2014, 1, 1)) == 238
     print("Coding complete? Click 'Check' to earn cool rewards!")
-
