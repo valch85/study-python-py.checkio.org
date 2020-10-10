@@ -1,7 +1,5 @@
 def checkio(array: list) -> int:
-    """
-        sums even-indexes elements and multiply at the last
-    """
+    #sums even-indexes elements and multiply at the last
     sum = 0
     if len(array) == 0:
         return (0)
@@ -22,4 +20,3 @@ if __name__ == '__main__':
     assert checkio([6]) == 36, "(6)*6=36"
     assert checkio([]) == 0, "An empty array = 0"
     print("Coding complete? Click 'Check' to review your tests and earn cool rewards!")
-
