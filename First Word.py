@@ -2,9 +2,7 @@ import re
 
 
 def first_word(text: str) -> str:
-    """
-        returns the first word in a given text.
-    """
+    #returns the first word in a given text.
     return re.search("([\w']+)", text).group(1)
 
 
