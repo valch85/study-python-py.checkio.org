@@ -1,11 +1,7 @@
 # Taken from mission Acceptable Password V
-
 # Taken from mission Acceptable Password IV
-
 # Taken from mission Acceptable Password III
-
 # Taken from mission Acceptable Password II
-
 # Taken from mission Acceptable Password I
 import re
 
