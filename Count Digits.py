@@ -1,7 +1,6 @@
 def count_digits(text: str) -> int:
     counter = 0
     for letter in text:
-        #print(letter)
         if letter.isdigit():
             counter += 1
     return counter
