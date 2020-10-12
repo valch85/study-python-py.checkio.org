@@ -3,7 +3,7 @@ from typing import List, Any
 
 def all_the_same(elements: List[Any]) -> bool:
     # convert to set, return will consist only with unique elements
-    # so if the lenth of the set bigger than 1 then not all element are the same.
+    # so if the length of the set bigger than 1 then not all element are the same.
     if len(set(elements)) <= 1:
         return True
     else:
