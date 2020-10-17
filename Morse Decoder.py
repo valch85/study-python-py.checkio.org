@@ -52,7 +52,14 @@ def morse_decoder(code):
 """
 # 2nd solution
 def morse_decoder(code):
-    print(" ".join("".join(MORSE[char] for char in word.split()) for word in code.split('   ')).capitalize())
+    return " ".join("".join(MORSE[char] for char in word.split()) for word in code.split('   ')).capitalize()
+
+"""
+# 3d solution
+def morse_decoder(code):
+    split_code = re.findall(r'(\S+|\s{3})', code)
+    return (text := ''.join([MORSE.get(char, ' ') for char in split_code])).capitalize()
+"""
 
 morse_decoder("... --- -- .   - . -..- -") #== "Some text"
 morse_decoder("..--- ----- .---- ---..") #== "2018"
