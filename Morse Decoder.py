@@ -12,7 +12,8 @@ MORSE = {'.-':    'a', '-...':  'b', '-.-.':  'c',
          '--...': '7', '---..': '8', '----.': '9'
         }
 
-
+"""
+# 1st solution
 def morse_convert(morse):
     # go through each key, value and find relevant
     for key, value in MORSE.items():
@@ -48,9 +49,13 @@ def morse_decoder(code):
         output = output[:-1]
 
     return output
-
+"""
+# 2nd solution
+def morse_decoder(code):
+    print(" ".join("".join(MORSE[char] for char in word.split()) for word in code.split('   ')).capitalize())
 
 morse_decoder("... --- -- .   - . -..- -") #== "Some text"
 morse_decoder("..--- ----- .---- ---..") #== "2018"
 morse_decoder(".. -   .-- .- ...   .-   --. --- --- -..   -.. .- -.--") #== "It was a good day"
+
 
