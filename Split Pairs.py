@@ -37,7 +37,21 @@ def split_pairs(a):
         except StopIteration:
             break
     return result
+
+# 3d solution
+def split_pairs(a):
+    list1 = list(a)
+    if len(a) % 2 == 1:
+        list1.append("_")
+    list2 = []
+    for x in range(0, len(list1), 2):
+        p = list1[x] + list1[x+1]
+        list2.append(p)
+    return list2
+
 """
+
+
 
 
 split_pairs('abcd') #== ['ab', 'cd']
