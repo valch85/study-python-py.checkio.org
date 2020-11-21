@@ -1,6 +1,12 @@
 def beginning_zeros(number: str) -> int:
+    answer = 0
+    for i in number:
+        if int(i) == 0:
+            answer += 1
+        else:
+            break
 
-    return 0
+    return answer
 
 
 
