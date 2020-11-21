@@ -49,6 +49,10 @@ def split_pairs(a):
         list2.append(p)
     return list2
 
+# 4th solution
+def split_pairs(a):
+    if len(a)%2 != 0: a += "_"
+    return [a[i:i+2] for i in range(0,len(a),2)]
 """
 
 
