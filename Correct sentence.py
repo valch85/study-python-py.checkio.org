@@ -1,4 +1,7 @@
 def correct_sentence(text: str) -> str:
+    if text[-1] != ".":
+        text = text + "."
+    text = text[0].upper() + text[1:]
     return text
 
 
