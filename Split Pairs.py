@@ -58,8 +58,8 @@ def split_pairs(a):
 
 
 
-split_pairs('abcd') #== ['ab', 'cd']
-split_pairs('abc') #== ['ab', 'c_']
-split_pairs('abcdf') #== ['ab', 'cd', 'f_']
-split_pairs('a') #== ['a_']
-split_pairs('') #== []
+print(split_pairs('abcd')) #== ['ab', 'cd']
+print(split_pairs('abc')) #== ['ab', 'c_']
+print(split_pairs('abcdf')) #== ['ab', 'cd', 'f_']
+print(split_pairs('a')) #== ['a_']
+print(split_pairs('')) #== []
