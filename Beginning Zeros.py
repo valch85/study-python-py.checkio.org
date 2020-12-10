@@ -5,9 +5,7 @@ def beginning_zeros(number: str) -> int:
             answer += 1
         else:
             break
-
     return answer
-
 
 
 beginning_zeros('100') #== 0
