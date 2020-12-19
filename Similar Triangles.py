@@ -3,7 +3,8 @@ Coords = List[Tuple[int, int]]
 
 
 def similar_triangles(coords_1: Coords, coords_2: Coords) -> bool:
-
+    print(coords_1)
+    print(coords_2)
     return False
 
 
