@@ -1,6 +1,20 @@
 def is_majority(items: list) -> bool:
+    # create lists for true & false count results
+    ttt = []
+    fff = []
+    # go through the items list
+    # and append them accordingly
+    for i in items:
+        if i == True:
+            ttt.append(i)
+        else:
+            fff.append(i)
 
-    return items
+    # check the lenth of lists
+    if len(ttt) <= len(fff):
+        return False
+    else:
+        return True
 
 
 
