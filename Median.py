@@ -1,8 +1,11 @@
 from typing import List
 
 def checkio(data: List[int]) -> [int, float]:
-
-    return data[0]
+    data = sorted(data)
+    if len(data)%2 == 0:
+        return (data[int(len(data)/2)] + data[int(len(data)/2-1)])/2
+    else:
+        return data[int(len(data)/2)]
 
 
 print(checkio([1, 2, 3, 4, 5]))# == 3, "Sorted list"
