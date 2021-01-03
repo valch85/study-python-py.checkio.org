@@ -34,6 +34,19 @@ def how_deep(structure):
     return count
 """
 
+# 4th
+"""
+def how_deep(structure, depth=0):
+    # Test if we have an iterable structure
+    try:
+        k = iter(structure)
+    except TypeError:
+        return depth
+
+    # Recurse on the elements. Append depth+1 to take care of empty iterables
+    return max([how_deep(i,depth+1) for i in k ]+[depth+1])
+"""
+
 
 print(how_deep((1, 2, 3)))  # == 1
 print(how_deep((1, 2, (3,))))# == 2
