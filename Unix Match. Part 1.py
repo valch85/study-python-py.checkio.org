@@ -10,8 +10,10 @@ patterns."""
 
 
 def unix_match(filename: str, pattern: str) -> bool:
-
-    return filename == pattern
+    if pattern == '*':
+        return True
+    elif pattern == '*.txt':
+        print(pattern[:-4])
 
 
 print(unix_match('somefile.txt', '*'))# == True
