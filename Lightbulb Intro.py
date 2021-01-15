@@ -9,40 +9,39 @@ from typing import List
 
 
 def sum_light(els: List[datetime]) -> int:
-
-    return answer
-
+    return type(els)
 
 
-    print(sum_light([
-        datetime(2015, 1, 12, 10, 0, 0),
-        datetime(2015, 1, 12, 10, 10, 10),
-    ]))# == 610
 
-    print(sum_light([
-        datetime(2015, 1, 12, 10, 0, 0),
-        datetime(2015, 1, 12, 10, 10, 10),
-        datetime(2015, 1, 12, 11, 0, 0),
-        datetime(2015, 1, 12, 11, 10, 10),
-    ]))# == 1220
+print(sum_light([
+    datetime(2015, 1, 12, 10, 0, 0),
+    datetime(2015, 1, 12, 10, 10, 10),
+]))# == 610˚
 
-    print(sum_light([
-        datetime(2015, 1, 12, 10, 0, 0),
-        datetime(2015, 1, 12, 10, 10, 10),
-        datetime(2015, 1, 12, 11, 0, 0),
-        datetime(2015, 1, 12, 11, 10, 10),
-        datetime(2015, 1, 12, 11, 10, 10),
-        datetime(2015, 1, 12, 12, 10, 10),
-    ]))# == 4820
+print(sum_light([
+    datetime(2015, 1, 12, 10, 0, 0),
+    datetime(2015, 1, 12, 10, 10, 10),
+    datetime(2015, 1, 12, 11, 0, 0),
+    datetime(2015, 1, 12, 11, 10, 10),
+]))# == 1220
 
-    print(sum_light([
-        datetime(2015, 1, 12, 10, 0, 0),
-        datetime(2015, 1, 12, 10, 0, 1),
-    ]))# == 1
+print(sum_light([
+    datetime(2015, 1, 12, 10, 0, 0),
+    datetime(2015, 1, 12, 10, 10, 10),
+    datetime(2015, 1, 12, 11, 0, 0),
+    datetime(2015, 1, 12, 11, 10, 10),
+    datetime(2015, 1, 12, 11, 10, 10),
+    datetime(2015, 1, 12, 12, 10, 10),
+]))# == 4820
 
-    print(sum_light([
-        datetime(2015, 1, 12, 10, 0, 0),
-        datetime(2015, 1, 12, 10, 0, 10),
-        datetime(2015, 1, 12, 11, 0, 0),
-        datetime(2015, 1, 13, 11, 0, 0),
-    ]))# == 86410
+print(sum_light([
+    datetime(2015, 1, 12, 10, 0, 0),
+    datetime(2015, 1, 12, 10, 0, 1),
+]))# == 1
+
+print(sum_light([
+    datetime(2015, 1, 12, 10, 0, 0),
+    datetime(2015, 1, 12, 10, 0, 10),
+    datetime(2015, 1, 12, 11, 0, 0),
+    datetime(2015, 1, 13, 11, 0, 0),
+]))# == 86410
