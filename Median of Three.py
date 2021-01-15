@@ -5,9 +5,18 @@ from typing import Iterable
 
 
 def median_three(els: Iterable[int]) -> Iterable[int]:
+    if len(els) <= 2:
+        return els
+    else:
+        answer = []
+        answer += els[0:2]
+        for i in range(0, len(els)-2):
+            temp = [els[i], els[i + 1], els[i + 2]]
+            temp = sorted(temp)
+            answer.append(temp[1])
+        return answer
 
-    return []
 
-
-    print(median_three([1, 2, 3, 4, 5, 6, 7]))# == [1, 2, 2, 3, 4, 5, 6]
-    print(median_three([1]))# == [1]
+print(median_three([1, 2, 3, 4, 5, 6, 7]))# == [1, 2, 2, 3, 4, 5, 6]
+print(median_three([1]))# == [1]
+print(median_three([5,2,9,1,7,4,6,3,8]))# == [5,2,5,2,7,4,6,4,6]
