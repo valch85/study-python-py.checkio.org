@@ -9,8 +9,12 @@ from typing import List
 
 
 def sum_light(els: List[datetime]) -> int:
-    return type(els)
-
+    temp = sorted(els, reverse=True)
+    sum_temp = []
+    for i in range(0, len(els), 2):
+        sum_temp.append(((temp[i]) - (temp[i+1])).total_seconds())
+    answer = sum(sum_temp)
+    return answer
 
 
 print(sum_light([
