@@ -6,6 +6,9 @@ def flat_list(array):
     print(array)
     return list(map(int, array.split(' '))) if array else []
 
+    # 2nd solution
+    for i in array: yield from [i] if type(i)==int else flat_list(i)
+
 
 print(flat_list([1, 2, 3])) #== [1, 2, 3], "First"
 print(flat_list([1, [2, 2, 2], 4])) #== [1, 2, 2, 2, 4], "Second"
